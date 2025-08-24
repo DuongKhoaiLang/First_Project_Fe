@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-<button class="">Button A</button>
+    <div class="container bg-red-500 mx-auto ">hello</div>
 </template>
 
 <style scoped></style>
