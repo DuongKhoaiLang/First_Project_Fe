@@ -18,11 +18,10 @@ function App() {
     setShowSideBar(!showSideBar)
   }
 
-  console.log(showSideBar);
   
 
   return (
-    <div className='font-serif'>
+    <div className='font-semibold'>
       <Header SideBarActive = {handleHeaderBarsClick}/>
       <div className='flex flex-row'>
         {showSideBar && <SideBar />}
