@@ -3,7 +3,7 @@
 
 function Event(){
     return (
-        <div>EventPage</div>
+        <div className="">EventPage</div>
     )
 }
 

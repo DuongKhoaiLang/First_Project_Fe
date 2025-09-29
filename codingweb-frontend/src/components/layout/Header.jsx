@@ -1,27 +1,24 @@
 import {Link} from 'react-router'
 import Logo from '../../assets/image/logo.png'
-import Usericon from '../ui/Usericon'
+import FontAwesomeIcon from '../ui/FontAwesomeIcon'
 
 
-function Header(){
+
+
+
+
+function Header({SideBarActive}){
     return(
-        <div className='wapper font-serif'>
+        <div className='wapper'>
             <header className='bg-gradient-to-r from-[#26162b] to-purple-700 text-white flex h-[70px]'>
-                <div className= 'flex-2'>
-                    <img src= {Logo} alt="" className='h-[100%] inline-block'/>
-                    <span className='text-[22px]'>CODEPLEASE</span>
+                <div className= 'flex-8'>
+                    <div className='inline-block' onClick={SideBarActive}><FontAwesomeIcon className='text-[20px] ml-[10px]' icon = 'faBars'/></div>
+                    <img src= {Logo} alt="" className='h-full inline-block'/>
+                    <span className='text-[30px]'>RE-ELSE</span>
                 </div>
-                <ul className='flex-5 flex space-x-7'>
-                    <li className='flex items-end mb-[5px]'><Link to = '/' >Trang Chủ</Link></li>
-                    <li className='flex items-end mb-[5px]'><Link to = '/Source' >Bài Tập</Link></li>
-                    <li className='flex items-end mb-[5px]'><Link to = '/Event' >Sự kiện</Link></li>
-                    <li className='flex items-end mb-[5px]'><Link to = '/About' >Giới Thiệu</Link></li>
-                </ul>
-
-                <ul className='flex-2 flex space-x-7'>
+                <ul className='flex-1 flex space-x-7'>
                     <li className='flex items-end mb-[5px]'><Link to = '/'>Đăng Nhập</Link></li>
-                    <li className='flex items-end mb-[5px]'><Link to = '/'>Đăng ký</Link></li>
-                    <li className='flex items-end mb-[10px]'><Usericon className='text-[20px]'/></li>
+                    <li className='flex items-end mb-[10px]'><FontAwesomeIcon className='text-[20px]' icon = 'faUser'/></li>
                 </ul>
             </header>
         </div>

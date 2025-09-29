@@ -3,7 +3,9 @@
 
 function About(){
     return (
-        <h1 className="text-[25px] text-purple-500">About Page</h1>
+        <div>
+            <h1 className="text-[25px] text-purple-500">About Page</h1>
+        </div>
     )
 }
 
