@@ -1,8 +1,9 @@
 import { useEffect, useRef } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import HomeImage1 from '../../assets/image/Home-pic-1.png'
+import HomeImage1 from '../../assets/image/Home_img/Home-pic-1.png'
 import Options from "./Options"
+import Overall from "./Overall"
 
 
 function Home(){
@@ -15,6 +16,7 @@ function Home(){
                 </div>
             </div>
             <Options/>
+            <Overall />
         </div>
     )
 }

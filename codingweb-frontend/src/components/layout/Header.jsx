@@ -9,7 +9,7 @@ import FontAwesomeIcon from '../ui/FontAwesomeIcon'
 
 function Header({SideBarActive}){
     return(
-        <div className='wapper border-b-1 border-[#7f7186]'>
+        <div className='wapper border-b-1 border-[#7f7186] w-full'>
             <header className='bg-gradient-to-r from-[#26162b] to-purple-700 text-white flex h-[70px]'>
                 <div className= 'flex-8'>
                     <div className='inline-block' onClick={SideBarActive}><FontAwesomeIcon className='text-[20px] ml-[10px]' icon = 'faBars'/></div>
