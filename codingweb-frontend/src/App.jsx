@@ -10,6 +10,9 @@ import Event from './pages/Event/Event.jsx'
 import SideBar from './components/layout/SideBar.jsx'
 
 
+fetch("http://localhost:8080/cac/359aa216-47f3-47fa-bdc9-2c0c9fe3719e").then(pre => (pre.json())).then(repons => {console.log(repons);
+})
+
 function App() {
 
   const [showSideBar,setShowSideBar] = useState(false)

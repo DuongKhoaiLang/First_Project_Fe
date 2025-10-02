@@ -1,16 +1,20 @@
 import { useEffect, useRef } from "react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import HomeImage from '../../assets/image/Home-pic-1.png'
+import HomeImage1 from '../../assets/image/Home-pic-1.png'
+import Options from "./Options"
 
 
 function Home(){
     return (
-        <div className="text-[25px] bg-gradient-to-r from-[#26162b] to-purple-700 min-h-[500px] transe basis-full">
+        <div className="text-[25px] bg-gradient-to-r from-[#26162b] to-purple-700 min-h-[500px] basis-full">
             <div className="flex">
-                <img src={HomeImage} alt=""/>
-                <span className="text-5xl mt-6 text-center text-white">Chào mừng các bạn <br />đã đến với RE-ELSE</span>
+                <img src={HomeImage1} alt=""/>
+                <div className="flex flex-col justify-center text-center">
+                    <span className="text-5xl mt-6 text-center text-white">Chào mừng các bạn đã đến với RE-ELSE</span>
+                </div>
             </div>
+            <Options/>
         </div>
     )
 }
