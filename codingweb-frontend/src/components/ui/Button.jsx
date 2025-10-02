@@ -1,9 +1,7 @@
 
 
 
-function Button({content,className}){
-    console.log(className);
-    
+function Button({content,className}){    
     return (
         <button className={className}>{content}</button>
     )

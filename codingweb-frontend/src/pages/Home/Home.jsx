@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import HomeImage1 from '../../assets/image/Home_img/Home-pic-1.png'
 import Options from "./Options"
 import Overall from "./Overall"
+import Test from "./Test"
 
 
 function Home(){
@@ -17,6 +18,7 @@ function Home(){
             </div>
             <Options/>
             <Overall />
+            <Test />
         </div>
     )
 }
