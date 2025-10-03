@@ -1,0 +1,12 @@
+#sticker {
+  animation: moveLeft 120s linear infinite;
+}
+
+@keyframes moveLeft {
+  0% {
+    right: 0;           /* bắt đầu từ mép phải */
+  }
+  100% {
+    right: 85%;        /* đi hết sang bên trái */
+  }
+}
