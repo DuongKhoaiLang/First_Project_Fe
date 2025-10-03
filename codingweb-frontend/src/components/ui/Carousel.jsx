@@ -38,7 +38,7 @@ function Carousel({ sildesList ,autoTrans}) {
                             <div className="basis-2/5 ml-10 text-white flex-col">
                                 <p className="text-[25px] mt-2">{slide.title}</p>
                                 <p className="text-[12px]">{slide.content}</p>
-                                <button className="bg-[#3a393c] absolute bottom-3 px-3 rounded-2xl"> <FontAwesome icon="faArrowRight" /></button>
+                                <button className="bg-[#3a393c] absolute bottom-3 px-2 rounded-2xl text-[16px] cursor-pointer">Truy Cập</button>
                             </div>
                             <img src={slide.src} alt="" className="size-40 absolute bottom-0 right-0" />
                             <div className='absolute flex inset-0 items-center justify-between px-1 w-full text-black'>

@@ -37,16 +37,16 @@ function OverallEvent(){
 
     return (
         <div className="h-[400px]">
-            <div className="w-3/4 h-full ml-auto flex flex-row bg-gradient-to-r from-[#2b2b2b] to-[#4242fd] mt-40 rounded-l-4xl border-y-2 border-l-2 border-[#752984]">
+            <div className="w-3/4 h-full ml-auto flex flex-row bg-gradient-to-r from-[#2b2b2b] to-[#4242fd] mt-30 rounded-l-4xl border-y-2 border-l-2 border-[#752984]">
                 
                 <div className="basis-2/3 flex space-x-7 justify-center items-baseline-last relative">
                     <img src={cat_Gif} alt="" className='size-20 top-0 absolute right-0' id='sticker'/>
                     <p className='absolute top-15 font-bold text-white text-[35px]'>Các chủ đề nổi bật</p>
                     {
                         eventList.map((eventItem,index) => (
-                            <div key={index} className='flex flex-col w-[100px] h-[120px] mb-8 hover:scale-[110%]'>
+                            <div key={index} className='flex flex-col w-[100px] h-[120px] mb-8 hover:scale-[110%] cursor-pointer'>
                                 <div className='basis-1/2 w-[100px] h-[100px]'>
-                                    <img src={eventItem.src} alt="" className='h-full w-full object-cover rounded-4xl'/>
+                                    <img src={eventItem.src} alt="" className='h-full w-full object-cover rounded-4xl shadow-xl/30'/>
                                 </div>
                                 <div className='basis-1/2 w-full h-[20px] text-[12px] text-white text-center'>
                                     <p>{eventItem.title}</p>

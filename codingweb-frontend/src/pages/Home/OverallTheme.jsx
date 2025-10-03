@@ -45,7 +45,7 @@ function OverallTheme() {
     
 
     return (
-        <div className="w-full mt-10 h-[450px]">
+        <div className="w-full mt-10 h-[400px]">
             <div className="w-3/4 h-full flex bg-[#2b2b2b] pr-25 rounded-r-4xl border-y-2 border-r-2 border-[#752984]">
 
                 <div className="basis-1/4 flex flex-col relative ml-10">
