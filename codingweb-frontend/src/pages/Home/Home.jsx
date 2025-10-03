@@ -3,9 +3,8 @@ import { useEffect, useRef } from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import HomeImage1 from '../../assets/image/Home_img/Home-pic-1.png'
 import Options from "./Options"
-import Overall from "./Overall"
-import Test from "./Test"
-
+import OverallTheme from "./OverallTheme"
+import OverallEvent from "./OverallEvent"
 
 function Home(){
     return (
@@ -17,8 +16,8 @@ function Home(){
                 </div>
             </div>
             <Options/>
-            <Overall />
-            <Test />
+            <OverallTheme />
+            <OverallEvent />
         </div>
     )
 }

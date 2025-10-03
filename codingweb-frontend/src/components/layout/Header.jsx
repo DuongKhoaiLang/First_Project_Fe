@@ -10,7 +10,7 @@ import FontAwesomeIcon from '../ui/FontAwesomeIcon'
 function Header({SideBarActive}){
     return(
         <div className='wapper border-b-1 border-[#7f7186] w-full'>
-            <header className='bg-gradient-to-r from-[#26162b] to-purple-700 text-white flex h-[70px]'>
+            <header className='bg-gradient-to-r from-[#26162b] to-purple-700 text-white flex h-[70px] z-10 fixed w-full'>
                 <div className= 'flex-8'>
                     <div className='inline-block' onClick={SideBarActive}><FontAwesomeIcon className='text-[20px] ml-[10px]' icon = 'faBars'/></div>
                     <img src= {Logo} alt="" className='h-full inline-block'/>
@@ -22,6 +22,7 @@ function Header({SideBarActive}){
                     <li className='flex items-end mb-[10px]'><FontAwesomeIcon className='text-[20px]' icon = 'faUser'/></li>
                 </ul>
             </header>
+            <div className='h-[70px] w-full'>a</div>
         </div>
     )
 }

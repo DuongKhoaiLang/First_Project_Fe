@@ -1,31 +1,61 @@
 import FontAwesome from './FontAwesomeIcon'
+import { useState ,useEffect} from 'react'
 
 
 
-function Carousel({sildesList}){
-    console.log(sildesList);
+function Carousel({ sildesList ,autoTrans}) {
     
+
+    const [curr , setCurr] = useState(0)
+
+    console.log(curr);
+    
+
+    const pre = () => {
+        console.log("pre");
+        
+        setCurr(curr == 0 ? sildesList.length - 1 : curr-1)
+    }
+
+    const next = () => {
+        console.log("next");
+        
+        setCurr(curr == sildesList.length - 1 ? 0  : curr + 1)
+    }
+
+    useEffect(() => {
+        const timerId = setInterval(next,7000) 
+        return () => clearInterval(timerId)
+    })
+    
+
     return (
         <div className="overflow-hidden flex size-full">
-            <div className="flex size-full">
+            <div className="flex size-full relative transition-transform ease-out duration-500" style={{transform : `translateX(-${curr*100}%)`}}>
                 {
-                    sildesList.map((slide,index) => (
-                        <div className='w-full h-2/4  bg-[#7667ff] flex-none m-auto relative rounded-2xl flex flex-row' key={index}>
-                            <div className="basis-2/5 ml-5 text-white flex-col">
-                            <p className="text-[25px] mt-2">Basic Programing</p>
-                            <p className="text-[12px]">Lập trình căn bản là bước khởi đầu để làm quen với thế giới công nghệ phần mềm. 
-                            Đây là môn học giúp người mới học hiểu được cách máy tính “suy nghĩ” và xử lý thông tin thông qua ngôn ngữ lập trình.</p>
-                            <button className="bg-[#3a393c] absolute bottom-3 px-3 rounded-2xl"> <FontAwesome icon="faArrowRight"/></button>
+                    sildesList.map((slide, index) => (
+                        <div className={slide.className} key={index}>
+                            <div className="basis-2/5 ml-10 text-white flex-col">
+                                <p className="text-[25px] mt-2">{slide.title}</p>
+                                <p className="text-[12px]">{slide.content}</p>
+                                <button className="bg-[#3a393c] absolute bottom-3 px-3 rounded-2xl"> <FontAwesome icon="faArrowRight" /></button>
                             </div>
-                            <img src={slide} alt="" className="size-40 absolute bottom-0 right-0"/>
-                            
-                            <button></button>
-                            
-                            <button></button>
+                            <img src={slide.src} alt="" className="size-40 absolute bottom-0 right-0" />
+                            <div className='absolute flex inset-0 items-center justify-between px-1 w-full text-black'>
+                                <button className='bg-white rounded-full text-[16px]' onClick={pre}>
+                                    <FontAwesome icon="faChevronLeft" />
+                                </button>
+
+                                <button className='bg-white rounded-full text-[16px]' onClick={next}>
+                                    <FontAwesome icon="faChevronRight" />
+                                </button>
+                            </div>
                         </div>
                     ))
                 }
             </div>
+
+
         </div>
     )
 }
