@@ -8,18 +8,11 @@ function Carousel({ sildesList ,autoTrans}) {
 
     const [curr , setCurr] = useState(0)
 
-    console.log(curr);
-    
-
-    const pre = () => {
-        console.log("pre");
-        
+    const pre = () => {        
         setCurr(curr == 0 ? sildesList.length - 1 : curr-1)
     }
 
-    const next = () => {
-        console.log("next");
-        
+    const next = () => {        
         setCurr(curr == sildesList.length - 1 ? 0  : curr + 1)
     }
 
